@@ -17,12 +17,8 @@ body {
 .blog-container,
 .category-container,
 .tags-container {
-  max-width: 100rem;
+  max-width: 50rem;
   margin: 0 auto;
-
-  @include desktop {
-    padding: 0 64px;
-  }
 }
 
 img {

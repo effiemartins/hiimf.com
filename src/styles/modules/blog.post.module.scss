@@ -10,7 +10,9 @@
     h1 {
       text-align: left;
       font-family: $font-sans;
-      color: $color-high-emphasis;
+      @include themed() {
+        color: t($text);
+      }
       font-weight: $font-weight--bold;
       margin-bottom: 16px;
       font-size: $font-size--extra-large;
@@ -32,7 +34,9 @@
       .authors,
       .posted {
         font-family: $font-sans;
-        color: $color-high-emphasis;
+        @include themed() {
+          color: t($text);
+        }
         font-weight: $font-weight--medium;
         text-align: left;
 
@@ -73,7 +77,10 @@
       font-size: $font-size--extra-large;
       line-height: 1.1em;
       margin: 1em 0;
-      color: $color-high-emphasis;
+
+      @include themed() {
+        color: t($text);
+      }
     }
 
     h2 {
@@ -91,7 +98,9 @@
       font-weight: $font-weight--thin;
       line-height: 1.5em;
 
-      color: $color-high-emphasis;
+      @include themed() {
+        color: t($text);
+      }
 
       @include mobile {
         font-size: $font-size--medium;

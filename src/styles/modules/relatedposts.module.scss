@@ -2,6 +2,10 @@
   max-width: 50rem;
   margin: 64px auto;
 
+  @include mobile {
+    padding: 0 16px;
+  }
+
   .relatedContainer {
     display: flex;
     justify-content: space-between;
@@ -22,10 +26,12 @@
           a {
             font-family: $font-serif;
             font-weight: $font-weight--bold;
-            color: $color-high-emphasis;
+            @include themed() {
+              color: t($text);
+            }
 
             &:hover {
-              color: $color-primary;
+              filter: brightness(110%);
             }
           }
           @include desktop {

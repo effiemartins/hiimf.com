@@ -32,13 +32,11 @@
 
   @include mobile {
     .container {
-      justify-content: space-between;
-      flex-direction: column-reverse;
+      display: block;
 
-      margin: 0 32px 64px 32px;
+      margin: 64px 16px;
       p {
-        font-size: $font-size--small;
-        text-align: center;
+        font-size: $font-size--medium;
         line-height: 1.5em;
       }
     }
