@@ -29,13 +29,14 @@ export async function getStaticProps({ preview }) {
 
   const alltypes: any[] = Object.keys(posts)
     .map((slug) => {
-      const type = posts[slug].Type
+      const type = posts[slug].Type.split(',')
 
       return type
     })
     .filter(Boolean)
+    .filter(onlyUnique)
 
-  const types = [].concat.apply([], alltypes).filter(onlyUnique).sort()
+  const types = [].concat.apply([], alltypes).sort().filter(onlyUnique)
 
   return {
     props: {

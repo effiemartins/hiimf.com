@@ -3,12 +3,19 @@
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  max-width: 50rem;
+  margin: 0 auto;
 
   h1 {
+    margin: unset;
+    padding: unset;
+
     a {
-      font-family: $font-headline;
+      font-family: $font-serif;
       font-weight: $font-weight--bold;
       display: block;
       text-align: center;
@@ -21,7 +28,7 @@
   }
 
   @include desktop {
-    padding: 16px 0 16px 0;
+    padding: 16px 0;
     margin: 16px auto;
 
     h1 a {
@@ -44,6 +51,7 @@
     &.is-sticky {
       h1 a {
         transform: scale(0.7);
+        transform-origin: 0;
       }
       ul {
         top: -12px;
@@ -57,7 +65,7 @@
 
   @include mobile {
     padding: 32px 0 32px 0;
-    margin: 32px 0 0 0;
+    margin: 32px 32px 0 32px;
 
     h1 a {
       font-size: $font-size--large;

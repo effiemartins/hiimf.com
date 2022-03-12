@@ -3,13 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useTheme } from 'next-themes'
-import ExtLink from './ext-link'
-
-import ThemeToggle from './themetoggle'
-import ReactTooltip from 'react-tooltip'
-import { FiCircle } from 'react-icons/fi'
-
-// import Nav from './nav'
+import Nav from './nav'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'About', page: '/' },
@@ -50,14 +44,11 @@ const Header = ({ titlePre = '' }) => {
   return (
     <header className={'header'}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} Tutu Menezes </title>
-        <meta
-          name="description"
-          content="Tutu Menezes — digital and product designer portfolio"
-        />
-        <meta name="og:title" content="tutumenezes.com" />
+        <title>{titlePre ? `${titlePre} |` : ''} Flora Martins </title>
+        <meta name="description" content="Flora Martins — web developer" />
+        <meta name="og:title" content="hiimf.com" />
         <meta property="og:image" content={ogImageUrl} />
-        <meta name="twitter:site" content="@tutumenezes" />
+        <meta name="twitter:site" content="@hiimf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
@@ -68,11 +59,11 @@ const Header = ({ titlePre = '' }) => {
         className={pathname === '/#start' ? 'active' : undefined}
       >
         <Link href="/">
-          <a>tutu menezes</a>
+          <a>Hi, I'm Flora</a>
         </Link>
       </h1>
 
-      {/* <Nav /> */}
+      <Nav />
     </header>
   )
 }

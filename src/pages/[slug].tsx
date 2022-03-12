@@ -13,6 +13,7 @@ import { getBlogLink, getDateStr, postIsPublished } from '../lib/blog-helpers'
 import Breadcrumbs from 'nextjs-breadcrumbs'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Loading from '../components/Loading'
+import { printTagsList } from '../lib/notion/printTagsList'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -103,6 +104,8 @@ export async function getStaticProps({ params: { slug }, preview }) {
       }
     }
   }
+
+  console.log(post)
 
   return {
     props: {
@@ -214,7 +217,7 @@ const RenderPost = ({ post, redirect, preview }) => {
           activeItemClassName={'activeItem'}
           omitIndexList={[1]}
         />
-        ;
+        {post.Type && printTagsList(post.Type.split(','), 1)}
         <hr />
         {(!post.content || post.content.length === 0) && (
           <p>This post has no content</p>

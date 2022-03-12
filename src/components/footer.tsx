@@ -3,19 +3,17 @@ import { FiGithub } from 'react-icons/fi'
 import { FiLinkedin } from 'react-icons/fi'
 import { FiTwitter } from 'react-icons/fi'
 
-const twitter = 'tutumenezes'
-const github = 'tutumenezes'
-const linkedin = 'tutumenezes'
-const email = 'tutumenezes@hub9.co'
+const twitter = 'hiimf'
+const github = 'effiemartins'
+const linkedin = 'flora-martins-299631a3'
+const email = 'flora.pmartins@gmail.com'
 
 export default function Footer() {
   return (
     <>
       <footer className="footer">
         <div className="container">
-          <div className="copyright">
-            Written and Built by tutumenezes in 2022 • Hit me up!
-          </div>
+          <div className="copyright">Copyright © 2022 • Get in touch!</div>
           <div className="social">
             {twitter && (
               <a

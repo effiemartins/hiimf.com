@@ -33,7 +33,7 @@ export async function getStaticProps({ params: { category }, preview }) {
 
   const alltypes: any[] = Object.keys(posts)
     .map((category) => {
-      const type = posts[category].Type
+      const type = posts[category].Type.split(',')
 
       return type
     })
@@ -61,13 +61,24 @@ export async function getStaticPaths() {
   // we fallback for any unpublished posts to save build time
   // for actually published ones
 
-  const types: any[] = Object.keys(postsTable)
-    .map((category) => {
-      const type = postsTable[category].Type
+  const postsTypes: any[] = Object.keys(postsTable)
+    .map((slug) => {
+      const post = postsTable[slug].Type
+
+      return post
+    })
+    .filter(Boolean)
+
+  const alltypes: any[] = Object.keys(postsTypes)
+    .map((slug) => {
+      const type = postsTypes[slug].split(',')
 
       return type
     })
     .filter(Boolean)
+    .filter(onlyUnique)
+
+  const types = [].concat.apply([], alltypes).sort().filter(onlyUnique)
 
   const paths = []
 

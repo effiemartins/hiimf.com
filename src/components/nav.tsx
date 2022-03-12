@@ -5,10 +5,11 @@ import { useTheme } from 'next-themes'
 
 import ThemeToggle from './themetoggle'
 import ReactTooltip from 'react-tooltip'
-import { FiFeather } from 'react-icons/fi'
+import { FiCoffee, FiHome } from 'react-icons/fi'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'About', page: '/about' },
+  { label: 'Home', page: '/' },
 ]
 
 const Nav = ({ titlePre = '' }) => {
@@ -19,15 +20,15 @@ const Nav = ({ titlePre = '' }) => {
     <div className="nav">
       <ul>
         {navItems.map(({ label, page, link }) => (
-          <li className="nav-list-item" key={label}>
+          <li
+            className={pathname === page ? 'hidden nav-list-item' : undefined}
+            key={label}
+          >
             {label == 'About' ? (
               <>
                 <Link href={page}>
-                  <a
-                    data-tip={label}
-                    className={pathname === page ? 'active' : undefined}
-                  >
-                    <FiFeather />
+                  <a data-tip={label}>
+                    <FiCoffee />
                     {theme == 'dark' ? (
                       <ReactTooltip
                         place="bottom"
@@ -42,8 +43,11 @@ const Nav = ({ titlePre = '' }) => {
               </>
             ) : (
               <Link href={page}>
-                <a className={pathname === page ? 'active' : undefined}>
-                  {label}
+                <a
+                  data-tip={label}
+                  className={pathname === page ? 'hidden' : undefined}
+                >
+                  <FiHome />
                   {theme == 'dark' ? (
                     <ReactTooltip place="bottom" type="light" effect="solid" />
                   ) : (

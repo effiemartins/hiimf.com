@@ -13,14 +13,6 @@
         display: block;
         a {
           text-decoration: underline;
-          &:hover {
-            &.futuur-link {
-              color: $color-project-futuur;
-            }
-            &.mude-link {
-              color: $color-project-mude;
-            }
-          }
         }
       }
     }
@@ -29,7 +21,7 @@
   @include desktop {
     .container {
       justify-content: space-between;
-      margin: 128px 16px;
+      margin: 128px 0;
 
       p {
         font-size: $font-size--medium;

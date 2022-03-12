@@ -22,6 +22,10 @@
     }
   }
 
+  .hidden {
+    display: none;
+  }
+
   @include desktop {
     ul {
       margin-top: 18px;
