@@ -1,0 +1,35 @@
+.tags-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 50rem;
+  margin: 0 auto 16px;
+
+  .tags-section-list {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+
+    h3 {
+      font-family: $font-sans;
+      text-transform: uppercase;
+      margin-right: 12px;
+    }
+
+    .tagItem {
+      color: $color-high-emphasis;
+      margin-right: 8px;
+      transition: all 0.2s $easing-bezier-fast;
+      font-size: $font-size--small;
+      color: $color-medium-emphasis;
+      font-family: $font-serif;
+      font-weight: $font-weight--medium;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

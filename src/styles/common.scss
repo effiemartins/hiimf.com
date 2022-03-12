@@ -13,9 +13,20 @@ body {
   overflow-x: hidden;
 }
 
-.main-container {
-  max-width: 50rem;
+.main-container,
+.blog-container,
+.category-container,
+.tags-container {
+  max-width: 100rem;
   margin: 0 auto;
+
+  @include desktop {
+    padding: 0 64px;
+  }
+}
+
+img {
+  display: block;
 }
 
 a,

@@ -64,14 +64,19 @@ const Index = ({ posts = [], preview }) => {
                       <div className="content-container">
                         <div className="cover-contain">
                           {post.Cover.length > 0 && (
-                            <Comp
-                              key={post.id}
-                              src={`/api/asset?assetUrl=${encodeURIComponent(
-                                post.Cover as any
-                              )}&blockId=${post.id}`}
-                              alt={post.Alt}
-                              className="cover"
-                            />
+                            <Link
+                              href={getBlogLink(post.Slug)}
+                              as={getBlogLink(post.Slug)}
+                            >
+                              <Comp
+                                key={post.id}
+                                src={`/api/asset?assetUrl=${encodeURIComponent(
+                                  post.Cover as any
+                                )}&blockId=${post.id}`}
+                                alt={post.Alt}
+                                className="cover"
+                              />
+                            </Link>
                           )}
                         </div>
                         <h3>

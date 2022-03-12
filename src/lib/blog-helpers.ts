@@ -10,6 +10,10 @@ export const onlyUnique = (value, index, self) => {
   return self.indexOf(value) === index
 }
 
+export const getShareLink = (slug: string) => {
+  return `/blog/${slug}`
+}
+
 export const getArticleLink = (slug: string) => {
   return `/article/${slug}`
 }

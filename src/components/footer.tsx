@@ -13,7 +13,9 @@ export default function Footer() {
     <>
       <footer className="footer">
         <div className="container">
-          <div className="copyright">Copyright © 2022 • Get in touch!</div>
+          <div className="copyright">
+            Copyright © • Made in 2022 using NextJS, TS and Notion!
+          </div>
           <div className="social">
             {twitter && (
               <a

@@ -1,0 +1,36 @@
+.blogBreadcrumb {
+  margin-top: 128px;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  ol {
+    margin: unset;
+    padding: unset;
+    li {
+      font-family: $font-serif;
+      list-style-type: none;
+      display: inline;
+      text-transform: uppercase;
+      margin-right: 8px;
+
+      a {
+        color: $color-medium-emphasis;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+
+      &::after {
+        display: inline-block;
+        content: '/';
+        margin-left: 8px;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
