@@ -5,6 +5,11 @@
   max-width: 50rem;
   margin: 0 auto 16px;
 
+  .section-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .tags-section-list {
     display: flex;
     align-items: center;

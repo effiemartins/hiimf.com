@@ -179,21 +179,7 @@
     .case-container {
       width: 100%;
       margin: 0 0 128px 0;
-      padding: 0 32px;
-
-      &:before {
-        display: block;
-        content: ' ';
-
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 8px;
-        height: 100%;
-        margin: unset;
-        padding-top: 48px;
-      }
+      padding: 0 16px;
 
       .content-list {
         display: flex;

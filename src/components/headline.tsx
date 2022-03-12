@@ -5,8 +5,9 @@ const Headline = () => (
   <div className="headline">
     <div className="container">
       <p>
-        <span>Creative Web Developer based in Rio.</span>
-        <span>Let's create something cool.</span>
+        <span>Creative Web Developer,</span>
+        <span>based in Rio de Janeiro.</span>
+        <span>☕🐶🌿</span>
       </p>
     </div>
   </div>
