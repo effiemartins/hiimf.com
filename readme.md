@@ -1,11 +1,9 @@
 ## About
 
-**Live Example hosted on Vercel**: https://tutumenezes.com/
+**Live Example hosted on Vercel**
 
 This is a personal website running on NextJS which pulls the majority of it's dynamic content from a NOTION Database.
-Meanings it's whole backend is resumed to a NOTION page. I've been writing about the process [here](https://tutumenezes.notion.site/Journal-Log-b60a8497bde94cb4b933d64437228740).
-
-You can check both the Backlog, Backend (databases) and Bookmarks for the project [here](https://www.notion.so/tutumenezes/tutumenezes-com-9c571887ad47453e82c8d98bcb8e50e6).
+Meanings it's whole backend is resumed to a NOTION page.
 
 Many projects inspired this one, and I'm currently writing about it here.
 But if you're looking for didatic code examples for NextJS + Notion, the projects below should do the job.
